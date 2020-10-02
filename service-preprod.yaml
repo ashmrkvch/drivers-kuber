@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: drivers-delivery-prod-service-preprod
+  labels:
+    purpose: drivers-delivery-prod
+  annotations:
+    cloud.google.com/neg: '{"ingress": true}'
+    beta.cloud.google.com/backend-config: '{"ports": {"80":"drivers-delivery-prod-backendconfig-preprod"}}'
+spec:
+  type: NodePort
+  selector:
+    purpose: drivers-delivery-prod
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80

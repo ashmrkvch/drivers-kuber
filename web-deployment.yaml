@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drivers-delivery-prod
+spec:
+  selector:
+    matchLabels:
+      purpose: drivers-delivery-prod
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        purpose: drivers-delivery-prod
+    spec:
+      containers:
+      - name: drivers-delivery-prod
+        image: gcr.io/pristine-sum-279212/drivers-dev-api:20200923-133719
+     
+
