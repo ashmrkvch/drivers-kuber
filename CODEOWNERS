@@ -1,0 +1,4 @@
+# Add @OWNER_NAME as an owner of OPA Gatekeeper constraints and templates
+ci-pipeline/config-root/cluster/*-constraint.yaml ashmrkvch
+ci-pipeline/config-root/cluster/*-template.yaml ashmrkvch
+ci-pipeline-unstructured/config-root/constraints ashmrkvch
